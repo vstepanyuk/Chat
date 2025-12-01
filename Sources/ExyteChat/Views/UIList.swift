@@ -539,7 +539,7 @@ struct UIList<MessageContent: View, InputView: View>: UIViewRepresentable {
         
         @ViewBuilder
         func sectionHeaderViewBuilder(_ section: Int) -> some View {
-            if let mainHeaderBuilder, section == 0 {
+            if let mainHeaderBuilder, section == sections.count - 1 {
                 VStack(spacing: 0) {
                     mainHeaderBuilder()
                     dateViewBuilder(section)
